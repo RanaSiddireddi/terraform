@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow_all" {
-  name        = "allow_${var.COMONENT}"
+  name        = "allow_${var.COMPONENT}"
   description = "Allow ssh inbound traffic"
 
   ingress {
@@ -18,6 +18,6 @@ resource "aws_security_group" "allow_all" {
   }
 
   tags = {
-    Name = "allow-${var.COMONENT}"
+    Name = "allow-${var.COMPONENT}"
   }
 }
