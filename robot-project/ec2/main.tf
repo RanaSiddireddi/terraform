@@ -25,7 +25,6 @@ resource "aws_spot_instance_request" "my_spot_server" {
 
 
 
-
 # resource "aws_instance" "my-ec2" {
 #   ami                     = data.aws_ami.lab-image.image_id
 #   instance_type           = "t2.micro"
