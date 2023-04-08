@@ -19,7 +19,7 @@ resource "aws_spot_instance_request" "my_spot_server" {
 
   provisioner "remote-exec" {
     inline = [
-       echo "here will be ansile-pull command similar to - ansible-pull -U git/source -e Component=something env=dev robot.yml"
+       "echo here will be ansile-pull command similar to - ansible-pull -U git/source -e Component=something env=dev robot.yml"
     ]
   }
 }
