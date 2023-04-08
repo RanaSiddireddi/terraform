@@ -1,9 +1,8 @@
 #creates ec2 instance
-
-
 resource "aws_spot_instance_request" "my_spot_server" {
   ami                   = data.aws_ami.lab-image.image_id
   instance_type         = "t2.micro"
+  vpc_security_group_ids = [aws_security_group.allow_all.id]
   wait_for_fulfillment  = true
 
   tags = {
